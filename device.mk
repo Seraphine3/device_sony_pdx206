@@ -21,7 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/sony/pdx203/pdx203-vendor.mk)
+$(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)
+
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 29
@@ -335,7 +339,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
     libhidltransport.vendor \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0
 
 # # HIDL
 # PRODUCT_PACKAGES += \
@@ -505,8 +512,10 @@ PRODUCT_PACKAGES += \
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
-# NXP NFC
-$(call inherit-product, vendor/nxp/nfc/nfc-vendor-product.mk)
+# NFC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -533,3 +542,4 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
