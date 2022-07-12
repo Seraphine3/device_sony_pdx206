@@ -29,6 +29,10 @@ TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 PRODUCT_NAME := lineage_pdx206
 PRODUCT_DEVICE := pdx206
 PRODUCT_MANUFACTURER := Sony
