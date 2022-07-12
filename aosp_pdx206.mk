@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # FIXME: this might not be right
 TARGET_BOOT_ANIMATION_RES := 1440
@@ -38,9 +38,6 @@ PRODUCT_MODEL := Xperia 5 II
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="Sony/PDX206/PDX206 12 58.2.A.7.55 RKQ1.211001.001:user release-keys"
-
-PRODUCT_PRODUCT_PROPERTIES += \
-                       lineage.updater.uri=https://lineage.bbntk.me/LineageOTA/api/v1/{device}/{type}/{incr}
+    PRIVATE_BUILD_DESC="Sony/PDX206/PDX206 12 58.2.A.7.93 RKQ1.211001.001:user release-keys"
 
 BUILD_FINGERPRINT := Sony/pdx206/pdx206:11/RKQ1.211001.001/1:user/release-keys
