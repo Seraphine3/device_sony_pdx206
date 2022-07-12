@@ -33,7 +33,7 @@ IS_PHONE := true
 PRODUCT_PACKAGES += \
     RemovePackages
 
-PRODUCT_NAME := lineage_pdx206
+PRODUCT_NAME := aosp_pdx206
 PRODUCT_DEVICE := pdx206
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
