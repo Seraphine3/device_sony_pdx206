@@ -24,6 +24,11 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Ricedroid Stuffs
+TARGET_FACE_UNLOCK_SUPPORTED := true
+RICE_MAINTAINER := Mia
+WITH_GAPPS := true
+
 # FIXME: this might not be right
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
