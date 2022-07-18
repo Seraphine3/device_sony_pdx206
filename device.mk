@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)
 
+# Inherit NFC
+$(call inherit-product, vendor/nxp/nfc/nfc-vendor-product.mk)
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
