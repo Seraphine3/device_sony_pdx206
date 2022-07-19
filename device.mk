@@ -28,7 +28,7 @@ $(call inherit-product, vendor/nxp/nfc/nfc-vendor-product.mk)
 
 # Using Sony Vendor Camera
 PRODUCT_PACKAGES += \
-    camera
+    SemcCameraUI
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
