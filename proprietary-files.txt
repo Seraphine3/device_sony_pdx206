@@ -72,6 +72,8 @@ system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 
 # Audio Firmware
+vendor/lib/hw/audio.primary.kona.so
+vendor/lib64/hw/audio.primary.kona.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libacdbrtac.so
