@@ -87,11 +87,15 @@
             <apply effect="ns"/>
         </stream>
         <stream type="mic">
+        <!-- Used for zoom noise reduction -->
             <apply effect="ZNR"/>
+        <!-- Used for wind noise reduction -->
             <apply effect="DNNR"/>
         </stream>
         <stream type="camcorder">
+        <!-- Used for zoom noise reduction -->
             <apply effect="ZNR"/>
+        <!-- Used for wind noise reduction -->
             <apply effect="DNNR"/>
         </stream>
     </preprocess>
