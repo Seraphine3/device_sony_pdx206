@@ -30,6 +30,7 @@ persist.vendor.audio.voicecall.speaker.stereo=true
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio_hal.period_size=192
+vendor.audio.no.fwk.enhance=true
 vendor.audio.tunnel.encode=false
 vendor.audio.offload.buffer.size.kb=32
 vendor.audio.offload.track.enable=true
