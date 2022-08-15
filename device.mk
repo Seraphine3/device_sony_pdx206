@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Cirrus Audio
+AUDIO_FEATURE_SONY_CIRRUS := true
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
