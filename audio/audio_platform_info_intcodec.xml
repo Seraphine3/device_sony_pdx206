@@ -49,6 +49,8 @@
             <device name="SND_DEVICE_IN_VOICE_DMIC" module_id="0x10F33" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
             <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
             <device name="SND_DEVICE_IN_USB_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_SONY_GE_GAMING_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
+            <device name="SND_DEVICE_IN_SONY_GE_INLINE_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x01"/>
         </aec>
         <ns>
             <device name="SND_DEVICE_IN_SPEAKER_TMIC_AEC_NS" module_id="0x10F35" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
@@ -65,6 +67,8 @@
             <device name="SND_DEVICE_IN_VOICE_DMIC" module_id="0x10F33" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
             <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
             <device name="SND_DEVICE_IN_USB_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_SONY_GE_GAMING_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
+            <device name="SND_DEVICE_IN_SONY_GE_INLINE_HEADSET_MIC" module_id="0x10F32" instance_id="0x0" param_id="0x10EAF" param_value="0x02"/>
         </ns>
     </module_ids>
 
@@ -91,6 +95,7 @@
         <usecase name="USECASE_AUDIO_PLAYBACK_AFE_PROXY" type="out" id="5"/>
         <usecase name="USECASE_AUDIO_RECORD_AFE_PROXY" type="in" id="6"/>
         <usecase name="USECASE_AUDIO_RECORD_LOW_LATENCY" type="in" id="9" />
+        <usecase name="USECASE_AUDIO_RECORD_VOIP_LOW_LATENCY" type="in" id="12" />
         <usecase name="USECASE_AUDIO_PLAYBACK_ULL" type="out" id="4" />
         <usecase name="USECASE_AUDIO_PLAYBACK_SILENCE" type="out" id="23" />
         <usecase name="USECASE_AUDIO_PLAYBACK_VOIP" type="out" id="12" />
@@ -138,8 +143,12 @@
     <acdb_ids>
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="15"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT" acdb_id="15"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="101"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT" acdb_id="124"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED_VBAT" acdb_id="101"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED" acdb_id="150"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="150"/>
         <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_1" acdb_id="14"/>
         <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_2" acdb_id="14"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_EXTERNAL_1" acdb_id="10"/>
@@ -174,6 +183,29 @@
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="11"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="165"/>
         <device name="SND_DEVICE_IN_VOICE_HEARING_AID" acdb_id="11"/>
+        <device name="SND_DEVICE_OUT_SONY_VOICE_TTY_HCO_SPEAKER" acdb_id="15"/>
+        <device name="SND_DEVICE_IN_HDMI_MIC" acdb_id="518"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_HEADPHONES" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_A2DP" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_USB_HEADSET" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_SCO" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_SCO_WB" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_SCO_SWB" acdb_id="795"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_VIBRATOR" acdb_id="900"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_VIBRATOR_A2DP" acdb_id="901"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_SPEAKER" acdb_id="900"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_HEADPHONES" acdb_id="900"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_USB_HEADPHONES" acdb_id="900"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_A2DP" acdb_id="901"/>
+        <device name="SND_DEVICE_IN_SONY_MONO_MIC" acdb_id="11"/>
+        <device name="SND_DEVICE_IN_SONY_HANDSET_MIC_ASR" acdb_id="528"/>
+        <device name="SND_DEVICE_IN_SONY_HEADSET_MIC_ASR" acdb_id="529"/>
+        <device name="SND_DEVICE_IN_SONY_CAMCORDER" acdb_id="544"/>
+        <device name="SND_DEVICE_IN_SONY_HANDSET_SECONDARY_MIC" acdb_id="35"/>
+        <device name="SND_DEVICE_IN_SONY_STEREO_MIC" acdb_id="35"/>
+        <device name="SND_DEVICE_IN_SONY_GE_GAMING_HEADSET_MIC" acdb_id="589"/>
+        <device name="SND_DEVICE_IN_SONY_GE_INLINE_HEADSET_MIC" acdb_id="590"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="41"/>
     </acdb_ids>
     <backend_names>
@@ -186,6 +218,7 @@
         <device name="SND_DEVICE_OUT_LINE" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_ANC_HEADSET" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="SENARY_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_HIFI_FILTER" backend="speaker-and-headphones" interface="SENARY_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones" interface="SENARY_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_ANC_HEADSET" backend="speaker-and-headphones" interface="SENARY_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
@@ -324,6 +357,27 @@
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="SENARY_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_SWB" backend="speaker-and-bt-sco-swb" interface="SENARY_MI2S_RX-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET" backend="speaker-and-usb-headphones" interface="SENARY_MI2S_RX-and-USB_AUDIO_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_VOICE_TTY_HCO_SPEAKER" interface="SENARY_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER" interface="SENARY_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_A2DP" backend="speaker-and-bt-a2dp" interface="SENARY_MI2S_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="SENARY_MI2S_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="SENARY_MI2S_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_BT_SCO_SWB" backend="speaker-and-bt-sco-swb" interface="SENARY_MI2S_RX-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="SENARY_MI2S_RX-and-RX_CDC_DMA_RX_0"/>
+        <device name="SND_DEVICE_OUT_SONY_RINGTONE_SPEAKER_AND_USB_HEADSET" backend="speaker-and-usb-headphones" interface="SENARY_MI2S_RX-and-USB_AUDIO_RX"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_A2DP" backend="bt-a2dp-and-vibrator" interface="SLIMBUS_7_RX-and-RX_CDC_DMA_RX_1"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_HEADPHONES" backend="headphones-and-vibrator" interface="RX_CDC_DMA_RX_0-and-RX_CDC_DMA_RX_1"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_HAPTICS_SPEAKER" backend="speaker-and-vibrator" interface="SENARY_MI2S_RX-and-RX_CDC_DMA_RX_1"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_VIBRATOR" backend="media-vibrator" interface="RX_CDC_DMA_RX_1"/>
+        <device name="SND_DEVICE_OUT_SONY_MEDIA_VIBRATOR_A2DP" backend="media-vibrator" interface="RX_CDC_DMA_RX_1"/>
+        <device name="SND_DEVICE_IN_SONY_MONO_MIC" interface="TX_CDC_DMA_TX_3"/>
+        <device name="SND_DEVICE_IN_SONY_HANDSET_MIC_ASR" interface="TX_CDC_DMA_TX_3"/>
+        <device name="SND_DEVICE_IN_SONY_HEADSET_MIC_ASR" backend="headset-mic" interface="TX_CDC_DMA_TX_4"/>
+        <device name="SND_DEVICE_IN_SONY_CAMCORDER" interface="TX_CDC_DMA_TX_3"/>
+        <device name="SND_DEVICE_IN_SONY_HANDSET_SECONDARY_MIC" interface="TX_CDC_DMA_TX_3"/>
+        <device name="SND_DEVICE_IN_SONY_STEREO_MIC" interface="TX_CDC_DMA_TX_3"/>
+        <device name="SND_DEVICE_IN_SONY_GE_GAMING_HEADSET_MIC" backend="headset-mic" interface="TX_CDC_DMA_TX_4"/>
+        <device name="SND_DEVICE_IN_SONY_GE_INLINE_HEADSET_MIC" backend="headset-mic" interface="TX_CDC_DMA_TX_4"/>
     </backend_names>
     <!-- below values are for ref purpose to OEM, doesn't contain actual hardware info on MTP -->
     <microphone_characteristics>
@@ -476,6 +530,30 @@
                         <mic_info mic_device_id="builtin_mic_2"
                             channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
                         <mic_info mic_device_id="builtin_mic_3"
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                <snd_dev in_snd_device="SND_DEVICE_IN_SONY_MONO_MIC">
+                        <mic_info mic_device_id="builtin_mic_1" 
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                <snd_dev in_snd_device="SND_DEVICE_IN_SONY_HANDSET_MIC_ASR">
+                        <mic_info mic_device_id="builtin_mic_1" 
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                <snd_dev in_snd_device="SND_DEVICE_IN_SONY_CAMCORDER">
+                        <mic_info mic_device_id="builtin_mic_1" 
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2" 
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                <snd_dev in_snd_device="SND_DEVICE_IN_SONY_HANDSET_SECONDARY_MIC">
+                        <mic_info mic_device_id="builtin_mic_2" 
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_UNUSED AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                    </snd_dev>
+                <snd_dev in_snd_device="SND_DEVICE_IN_SONY_STEREO_MIC">
+                        <mic_info mic_device_id="builtin_mic_1" 
+                            channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
+                        <mic_info mic_device_id="builtin_mic_2" 
                             channel_mapping="AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED"/>
                     </snd_dev>
             </input_snd_device_mic_mapping>
